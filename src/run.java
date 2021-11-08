@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
 
 public class run {
     public static void main(String[] args) throws IOException {
-        // init classes
+        // init objects
         DecimalFormat f = new DecimalFormat("#.00");
         variable var = new variable();
         worker wrk = new worker();
@@ -31,10 +31,11 @@ public class run {
 
         // end runtime
         long run_t_end = System.currentTimeMillis();
-        System.out.print("\n\n>>> Runtime: " + (run_t_end - run_t_start) + " ms");
-        // this can't be right >> total mem = total allocated memory
-        //                     >> free mem = derp (amount of allocated memory available)
-        double used_mem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        System.out.print("\n\tMemory Usage: " + f.format(used_mem/Math.pow(10, 6)) + " MB");
+
+            System.out.print("\n\n>>> Runtime: " + (run_t_end - run_t_start) + " ms");
+            // this can't be right >> total mem = total allocated memory
+            //                     >> free mem = derp (amount of allocated memory available)
+            double used_mem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+            System.out.print("\n\tMemory Usage: " + f.format(used_mem/Math.pow(10, 6)) + " MB");
     }
 }

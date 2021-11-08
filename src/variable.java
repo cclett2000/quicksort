@@ -10,5 +10,5 @@ public class variable {
     ArrayList<Integer> tmp_dat = new ArrayList<>(); //arrayList for file content (before sort)
 
     // sorting
-    int start_ind = 0; // this variable isn't really needed; su
+    int start_ind = 0;
 }
