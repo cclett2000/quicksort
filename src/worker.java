@@ -8,7 +8,7 @@ import java.util.Collections;
 Helpful Link(s):
     - https://www.baeldung.com/java-quicksort
 Note2Self:
-    - The textbook sucks, p = start_ind|r = end_ind
+    - The textbook sucks, p = start_ind, r = end_ind
         ^ Why couldn't the book have just said this????
  */
 

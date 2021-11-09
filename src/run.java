@@ -11,21 +11,21 @@ import java.text.DecimalFormat;
 public class run {
     public static void main(String[] args) throws IOException {
         // init objects
-        DecimalFormat f = new DecimalFormat("#.00");
-        variable var = new variable();
-        worker wrk = new worker();
+        DecimalFormat f = new DecimalFormat("#.00"); // used to format decimals to two places
+        variable var = new variable(); // holds (global?) variables
+        worker wrk = new worker(); // holds the main workings of the program
 
         //start runtime
         long run_t_start = System.currentTimeMillis();
 
-            // prepare file
+            // prepare file and store its contents
             wrk.f_handler(var.tmp_dat, var.data, var.PATH);
 
-            // run sorter
+            // run sorting algorithm
             System.out.print("\n\n>>> Sorting....");
             wrk.q_sort(var.data, var.start_ind, var.data.size() - 1);
             System.out.print("Done");
-                // arrayCompare messages
+                // array compare messages
                 System.out.print("\n\tArray Before QuickSort: " + var.tmp_dat);
                 System.out.print("\n\tArray After QuickSort:  " + var.data);
 
